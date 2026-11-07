@@ -80,7 +80,7 @@ Once you complete both items above, submit the link to your repository for lab 2
 - No — A professor and an instructor are not always the same entity if the diagram distinguishes roles separately.
 
 ### ERD Snippet
-![ERD Snippet](https://instructorc.github.io/site/home/images/school_ERD.PNG)
+![ERD Snippet](./Conceptual_Modeling.drawio.png)
 
 ### Summary
 The conceptual model shows how students, courses, sections, instructors, and professors relate to each other in a school system. These relationships support the design of a normalized relational database and clarify the academic rules for enrollment and teaching assignments.
