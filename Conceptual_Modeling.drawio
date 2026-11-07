@@ -64,7 +64,7 @@
           <mxGeometry height="30" width="60" x="940" y="440" as="geometry" />
         </mxCell>
         <mxCell id="P_i7Tp09iAX8o30A6cAQ-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="takes" vertex="1">
-          <mxGeometry height="30" width="60" x="320" y="90" as="geometry" />
+          <mxGeometry height="30" width="60" x="300" y="90" as="geometry" />
         </mxCell>
         <mxCell id="P_i7Tp09iAX8o30A6cAQ-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="has" vertex="1">
           <mxGeometry height="30" width="60" x="400" y="340" as="geometry" />
@@ -81,7 +81,7 @@
         <mxCell id="crabrlPLaYOJthxfgRt5-1" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;ENROLLMENT&lt;/font&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="120" width="160" x="210" y="150" as="geometry" />
         </mxCell>
-        <mxCell id="crabrlPLaYOJthxfgRt5-2" parent="crabrlPLaYOJthxfgRt5-1" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="*student_id&amp;nbsp;&lt;div&gt;student_name&lt;/div&gt;&lt;div&gt;student_address&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="crabrlPLaYOJthxfgRt5-2" parent="crabrlPLaYOJthxfgRt5-1" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="*student_id&amp;nbsp;&lt;div&gt;*course_number&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="160" y="50" as="geometry" />
         </mxCell>
         <mxCell id="crabrlPLaYOJthxfgRt5-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="teachers" vertex="1">
