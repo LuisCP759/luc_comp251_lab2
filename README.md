@@ -51,36 +51,38 @@ Once you complete both items above, submit the link to your repository for lab 2
 ## Student Work Added Below
 
 ### Entity Descriptions
-- **STUDENT**: Represents a person enrolled in classes. Possible attributes include student ID, name, and address.
-- **SEAT**: Represents a specific assigned seat for a student within a classroom or section. Possible attributes include seat number and seat position.
-- **COURSE**: Represents an academic subject offered by the school. Possible attributes include course number and course name.
-- **SECTION**: Represents a specific offering of a course. Possible attributes include section number.
-- **PROFESSOR**: Represents a faculty member who teaches sections. Possible attributes include professor ID, name, and faculty.
-- **INSTRUCTOR**: Represents the faculty member assigned to teach a course. Possible attributes include instructor number, name, and faculty.
+- **STUDENT**: Represents a student. Attributes shown are student ID, name, and address.
+- **SEAT**: Represents a seat. Attributes shown are seat number and seat position.
+- **ENROLLMENT**: Associative entity connecting a student and a course. Attributes shown are student ID and course number.
+- **COURSE**: Represents an academic course. Attributes shown are course name and course number.
+- **COURSE_SECTION**: Associative entity connecting a course and a section. Attributes shown are course number and section number.
+- **SECTION**: Represents a course section. Attribute shown is section number.
+- **INSTRUCTOR**: Represents an instructor. Attributes shown are instructor number, name, and faculty.
+- **PROFESSOR**: Represents a professor. Attributes shown are professor ID, name, and faculty.
 
 ### Relationships
-- **STUDENT** <ins>fills</ins> **SEAT**
-- **SEAT** <ins>is filled by</ins> **STUDENT**
-- **STUDENT** <ins>takes</ins> **COURSE**
-- **COURSE** <ins>is taken by</ins> **STUDENT**
-- **COURSE** <ins>has</ins> **SECTION**
-- **SECTION** <ins>belongs to</ins> **COURSE**
-- **SECTION** <ins>is taught by</ins> **PROFESSOR**
-- **PROFESSOR** <ins>teaches</ins> **SECTION**
-- **INSTRUCTOR** <ins>teaches</ins> **COURSE**
-- **COURSE** <ins>is taught by</ins> **INSTRUCTOR**
+- Each **STUDENT** <ins>fills</ins> exactly one **SEAT**, and each **SEAT** <ins>is filled by</ins> exactly one **STUDENT**.
+- Each **STUDENT** <ins>has</ins> one or more **ENROLLMENT** records, and each **ENROLLMENT** <ins>belongs to</ins> exactly one **STUDENT**.
+- Each **COURSE** <ins>has</ins> one or more **ENROLLMENT** records, and each **ENROLLMENT** <ins>is for</ins> exactly one **COURSE**.
+- Each **COURSE** <ins>has</ins> one or more **COURSE_SECTION** records, and each **COURSE_SECTION** <ins>belongs to</ins> exactly one **COURSE**.
+- Each **SECTION** <ins>is associated with</ins> one or more **COURSE_SECTION** records, and each **COURSE_SECTION** <ins>identifies</ins> exactly one **SECTION**.
+- Each **INSTRUCTOR** <ins>teaches</ins> one or more **COURSE** entities, and each **COURSE** <ins>is taught by</ins> exactly one **INSTRUCTOR**.
+- Each **PROFESSOR** <ins>teaches</ins> zero or more **SECTION** entities, and each **SECTION** <ins>is taught by</ins> exactly one **PROFESSOR**.
+
+The model represents a student's course-taking relationship through **ENROLLMENT**, and a course's section relationship through **COURSE_SECTION**.
 
 ### Assumptions
-- Yes — A student may take multiple courses.
-- Yes — A course can be offered in multiple sections.
-- Yes — A section is associated with one course.
-- Yes — A professor can teach multiple sections.
-- Yes — An instructor can teach more than one course.
-- No — A student is not limited to one seat across all courses; seat assignment depends on the specific course or section context.
-- No — A professor and an instructor are not always the same entity if the diagram distinguishes roles separately.
+- Can one **STUDENT** have multiple **ENROLLMENT** records? **Yes.**
+- Can one **COURSE** have multiple **ENROLLMENT** records? **Yes.**
+- Can one **COURSE** be associated with multiple **COURSE_SECTION** records? **Yes.**
+- Can a **PROFESSOR** teach zero **SECTION** entities? **Yes.**
+- Must each **SECTION** be taught by exactly one **PROFESSOR**? **Yes.**
+- Can one **INSTRUCTOR** teach multiple **COURSE** entities? **Yes.**
+- Can one **ENROLLMENT** record represent multiple students? **No.**
+- Can one **STUDENT** fill multiple seats? **No.**
 
 ### ERD Snippet
 ![ERD Snippet](./Conceptual_Modeling.drawio.png)
 
 ### Summary
-The conceptual model shows how students, courses, sections, instructors, and professors relate to each other in a school system. These relationships support the design of a normalized relational database and clarify the academic rules for enrollment and teaching assignments.
+The conceptual model shows how students, seats, enrollments, courses, course sections, instructors, and professors relate in a school system. **ENROLLMENT** and **COURSE_SECTION** represent the associations between their related entities.
